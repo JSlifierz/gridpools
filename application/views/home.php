@@ -86,6 +86,19 @@
 			'name' => 'img',
 			'id' => 'img',
 			'onchange' => 'viewPhoto(this)',
+			'accept' => 'image/*'
+		);
+
+		$token = array(
+			'name' => 'token',
+			'id' => 'token',
+			'style' => 'display:none;'
+		);
+
+		$email = array(
+			'name' => 'email',
+			'id' => 'email',
+			'style' => 'display:none;'
 		);
 
 		echo form_open_multipart('welcome/charge', 'id="signupForm"');
@@ -97,29 +110,14 @@
 		echo form_radio($ten);
 		echo form_label('10x10 Grid', 'ten');
 		echo form_upload($img);
+		echo form_input($token);
+		echo form_input($email);
 		?>
-
-		<div id="errors"></div>
-
-		<script src="https://checkout.stripe.com/checkout.js"></script>
-
-		<button class="red" id="customButton">Purchase</button>
-
-		<?php
-
-		echo form_close();
-
-		?>
-
-		<div class="pimg">
-			<?php echo '<img src="http://dm2lmglugmay7.cloudfront.net/images/crown.png">' ?>
-			<div id="imgCrop">
-				<?php echo '<img class="profile" src="http://dm2lmglugmay7.cloudfront.net/images/logo.png">' ?>
-			</div>
-		</div>
 
 		<script>
+
 			var viewPhoto = function(input) {
+
 		        if (input.files && input.files[0]) {
 		            var reader = new FileReader();
 
@@ -147,7 +145,27 @@
 		            reader.readAsDataURL(input.files[0]);
 		        }   
 		    }
+
 		</script>
+
+		<div id="errors"></div>
+
+		<script src="https://checkout.stripe.com/checkout.js"></script>
+
+		<button class="red" id="customButton">Purchase</button>
+
+		<?php
+
+		echo form_close();
+
+		?>
+
+		<div class="pimg">
+			<?php echo '<img src="http://dm2lmglugmay7.cloudfront.net/images/crown.png">' ?>
+			<div id="imgCrop">
+				<?php echo '<img class="profile" src="http://dm2lmglugmay7.cloudfront.net/images/logo.png">' ?>
+			</div>
+		</div>
 
 	</div>
 

@@ -47,41 +47,12 @@ $(document).ready(function() {
 			var handler = StripeCheckout.configure({
 				key: 'pk_test_yTRK4MGIlrEMzR5As0wo8Uxk',
 				image: 'http://dm2lmglugmay7.cloudfront.net/images/logo.png',
+				currency: 'CAD',
 				token: function(token, args) {
 
-					var $url = $('#signupForm').attr('action');
-
-					var $data = {
-						'name' : $('#name').val(),
-						'grid' : $('#grid').val(),
-						'bet' : $('#bet').val(),
-						'size' : $('#size').val(),
-						'card' : token
-					};
-
-					$.ajax({
-
-						'url' : $url,
-						'data' : $data,
-						'type' : 'POST',
-						
-						'beforeSend': function(xhr, settings) {
-					    	console.log('ABOUT TO SEND');
-					    },
-					    
-					    'success': function(result, status_code, xhr) {
-					    	console.log('SUCCESS!'); 
-					    },
-					    
-					    'complete': function(xhr, text_status) {
-					    	console.log('Done.');
-					    },
-					    
-					    'error': function(xhr, text_status, error_thrown) {
-					    	console.log('ERROR!', text_status, error_thrown);
-					    }
-
-					});
+					$('#token').val(token.id);
+					$('#email').val(token.email);
+					$('#signupForm').submit();
 
 				}
 			});
@@ -89,8 +60,7 @@ $(document).ready(function() {
 			handler.open({
 				name: 'Gridpools',
 				description: 'Purchase your Grid',
-				amount: 299,
-				currency: 'CAD'
+				amount: 299
 			});
 		}
 

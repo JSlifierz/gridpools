@@ -224,7 +224,7 @@ $config['cache_path'] = '';
 | MUST set an encryption key.  See the user guide for info.
 |
 */
-$config['encryption_key'] = '';
+$config['encryption_key'] = 'ld405FRmlD153O79b2SgpQolrZ4JZ4Wu';
 
 /*
 |--------------------------------------------------------------------------
@@ -294,8 +294,8 @@ $config['global_xss_filtering'] = TRUE;
 | 'csrf_expire' = The number in seconds the token should expire.
 */
 $config['csrf_protection'] = TRUE;
-$config['csrf_token_name'] = 'gridpools';
-$config['csrf_cookie_name'] = 'gridpools';
+$config['csrf_token_name'] = 'gridpools_csrf';
+$config['csrf_cookie_name'] = 'gridpools_csrf';
 $config['csrf_expire'] = 7200;
 
 /*
