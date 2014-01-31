@@ -48,13 +48,13 @@
 $active_group = 'default';
 $active_record = TRUE;
 
-$db['default']['hostname'] = 'localhost';
-$db['default']['username'] = '';
-$db['default']['password'] = '';
-$db['default']['database'] = '';
+$db['default']['hostname'] = 'aawmi0y5nub1e0.caeurwmp8ruj.us-east-1.rds.amazonaws.com';
+$db['default']['username'] = 'sproutr';
+$db['default']['password'] = '12Hawk34Nest56';
+$db['default']['database'] = 'gridpool';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
-$db['default']['pconnect'] = TRUE;
+$db['default']['pconnect'] = FALSE;
 $db['default']['db_debug'] = TRUE;
 $db['default']['cache_on'] = FALSE;
 $db['default']['cachedir'] = '';
