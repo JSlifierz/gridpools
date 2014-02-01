@@ -10,7 +10,7 @@ $(document).ready(function() {
 	});
 
 	$('#join').click(function() {
-		$('.grid form').css({
+		$('.grid .info').css({
 			opacity: 1,
 			pointerEvents: 'auto'
 		});

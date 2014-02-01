@@ -25,19 +25,20 @@
 			<h1>GRIDPOOLS</h1>
 			<button id="create" class="yellow">Create</button>
 			<button id="join" class="yellow">Join Grid</button>
+			<p class="info">Ask the GridPin for the link to their grid, and start playing!</p>
 			<?php
 
-			$search = array(
-				'name' => 'search',
-				'id' => 'search',
-				'placeholder' => 'Search for Grid',
-				'required' => 'required'
-			);
+			// $search = array(
+			// 	'name' => 'search',
+			// 	'id' => 'search',
+			// 	'placeholder' => 'Search for Grid',
+			// 	'required' => 'required'
+			// );
 
-			echo form_open('welcome/search');
-			echo form_input($search);
-			echo form_submit('submit', 'Go', 'class="go yellow"');
-			echo form_close();
+			// echo form_open('welcome/search');
+			// echo form_input($search);
+			// echo form_submit('submit', 'Go', 'class="go yellow"');
+			// echo form_close();
 
 			?>
 			<p id="video">What is GridPools?</p>
@@ -69,18 +70,18 @@
 			'placeholder' => 'Bet Per Box'
 		);
 
-		$five = array(
-			'name' => 'size',
-			'id' => 'five',
-			'value' => 'five'
-		);
+		// $five = array(
+		// 	'name' => 'size',
+		// 	'id' => 'five',
+		// 	'value' => 'five'
+		// );
 
-		$ten = array(
-			'name' => 'size',
-			'id' => 'ten',
-			'value' => 'ten',
-			'checked' => 'checked'
-		);
+		// $ten = array(
+		// 	'name' => 'size',
+		// 	'id' => 'ten',
+		// 	'value' => 'ten',
+		// 	'checked' => 'checked'
+		// );
 
 		$img = array(
 			'name' => 'img',
@@ -105,11 +106,11 @@
 		echo form_input($name);
 		echo form_input($grid);
 		echo form_input($bet) . '<br>';
-		echo form_radio($five);
-		echo form_label('5x5 Grid', 'five');
-		echo form_radio($ten);
-		echo form_label('10x10 Grid', 'ten');
-		echo form_upload($img);
+		// echo form_radio($five);
+		// echo form_label('5x5 Grid', 'five');
+		// echo form_radio($ten);
+		// echo form_label('10x10 Grid', 'ten');
+		// echo form_upload($img);
 		echo form_input($token);
 		echo form_input($email);
 		?>
@@ -153,6 +154,10 @@
 		<script src="https://checkout.stripe.com/checkout.js"></script>
 
 		<button class="red" id="customButton">Purchase</button>
+
+		<p>*Only 10x10 grids available currently. Will have 5x5 soon. To accomodate for a smaller party, just lower your bet per box.</p>
+		<p>*We will be updating Gridpools continuously up until the Superbowl. Email us with requests!</p>
+		<a href="welcome/terms" target="_blank">Terms of Use and Service</a>
 
 		<?php
 

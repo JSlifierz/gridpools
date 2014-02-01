@@ -13,16 +13,19 @@ class Welcome extends CI_Controller {
 		$this->load->model('charge_model');
 		$errors = $this->charge_model->charge();
 
-		foreach ($errors as $error) {
-			echo $error;
-		}
-
-		$link = 'grid/id/' . $errors;
+		// foreach ($errors as $error) {
+		// 	echo $error;
+		// }
 
 		if (strpos($errors, 'GRD') !== false) {
-			redirect($link);
+			$link = str_replace('GRD', '', $errors);
+			redirect('grid/id/GRD' . $link);
 		}
 
+	}
+
+	public function terms() {
+		$this->load->view('terms');
 	}
 
 }
