@@ -45,7 +45,7 @@ $(document).ready(function() {
 
 		else {
 			var handler = StripeCheckout.configure({
-				key: 'pk_test_yTRK4MGIlrEMzR5As0wo8Uxk',
+				key: 'pk_live_lQkLnNuytMUWmexxdfrhaBRo',
 				image: 'http://dm2lmglugmay7.cloudfront.net/images/logo.png',
 				currency: 'CAD',
 				token: function(token, args) {

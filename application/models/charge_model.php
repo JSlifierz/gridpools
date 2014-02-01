@@ -15,7 +15,7 @@ class Charge_model extends CI_Model {
 
 		require_once(realpath(APPPATH . 'stripe/lib/Stripe.php'));
 
-		Stripe::setApiKey("sk_test_XANoeJm0aw759joGzuu4KaPR");
+		Stripe::setApiKey("sk_live_md6RkXduvaIQ3tJCcpNNB6zw");
 
 		try {
 			$data = array(
