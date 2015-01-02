@@ -8,9 +8,13 @@
  */
 
 angular.module('gridpoolsApp')
-  .controller('LandingController',['$scope', '$window', function ($scope, $window) {
-    console.log('LandingController')
-    $scope.windowHeight = $window.innerHeight;
-    console.log($scope.windowHeight)
+  .controller('LandingController',['$scope', '$state', function ($scope, $state) {
+
+    // $scope.windowHeight = $window.innerHeight;
+    // console.log($scope.windowHeight)
+
+    $scope.play = function () {
+        $state.go('grid');
+    }
 
   }]);

@@ -1,39 +1,43 @@
+<div class="container">
 
-<div class="grid">
-    <div class="cnt">
-        <img src="../images/gridpoolsLogo.png" alt="Gridpools Logo">
-        <h1>GRIDPOOLS</h1>
-        <button id="create" class="yellow">Create</button>
-        <button id="join" class="yellow">Join Grid</button>
-        <p>Play Superbowl Squares Online!</p>
-        <a href="mailto:info@gridpools.com">Contact Us</a>
-    </div>
-    <script type="text/javascript">
-        $(document).ready(function() {
-            var $screenHeight = $(window).height();
-            $('.grid').css('height', $screenHeight);
-        });
-    </script>
-</div>
-
-<div class="signup margin">
-
-    <h2>Start <span class="bold">a grid</span> for you and your friends</h2>
-
-    <form>
-        <input type="text" placeholder="Full Name" required>
-        <input type="email" placeholder="Email" required>
-        <input type="text" placeholder="Grid Name">
-        <input type="submit" value="PLAY!">
-    </form>
-
-    <a href="welcome/terms" target="_blank">Terms of Use and Service</a>
-
-    <div class="pimg">
-        <img src="../images/crown.png" alt="Gridpools Crown">
-        <div id="imgCrop">
-            <img src="../images/logo.png" alt="Gridpools Logo">
+    <div class="grid">
+        <div class="cnt">
+            <img src="../images/gridpoolsLogo.png" alt="Gridpools Logo">
+            <h1>GRIDPOOLS</h1>
+            <button id="create" class="yellow">Create</button>
+            <button id="join" class="yellow">Join Grid</button>
+            <p>Play Superbowl Squares Online!</p>
+            <a href="mailto:info@gridpools.com">Contact Us</a>
         </div>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var $screenHeight = $(window).height();
+                $('.grid').css('height', $screenHeight);
+            });
+        </script>
+    </div>
+
+    <div class="signup margin">
+
+        <h2>Start <span class="bold">a grid</span> for you and your friends</h2>
+
+        <form novalidate ng-submit="play()">
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email" required>
+            <input type="text" placeholder="Grid Name">
+            <a href="welcome/terms" target="_blank">Terms of Use and Service</a>
+            <input type="submit" value="PLAY!" class="red">
+        </form>
+
+
+
+        <div class="pimg col-lg-6">
+            <img src="../images/crown.png" alt="Gridpools Crown">
+            <div id="imgCrop">
+                <img src="../images/logo.png" alt="Gridpools Logo">
+            </div>
+        </div>
+
     </div>
 
 </div>

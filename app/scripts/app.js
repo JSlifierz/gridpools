@@ -17,7 +17,8 @@ angular
     'ngSanitize',
     'ngTouch',
     // 3rd-Party Modules
-    'ui.router'
+    'ui.router',
+    'ui.grid'
   ])
   .config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/');
@@ -27,6 +28,12 @@ angular
         url: '/',
         templateUrl: 'views/landing.html',
         controller: 'LandingController',
+        module: 'public'
+      })
+      .state('grid', {
+        url: '/grid',
+        templateUrl: 'views/grid.html',
+        controller: 'GridController',
         module: 'public'
       })
 
