@@ -1,5 +1,16 @@
-<div>
-THis is the GRID Page
-</div>
+<div class="play">
 
-<div ui-grid="gridOptions" class="myGrid"></div>
+    <div deckgrid source="squares" class="deckgrid">
+
+        <div class="square"><span>{{card.sq}}</span></div>
+
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var $screenHeight = $(window).height();
+            $('.play').css('height', $screenHeight);
+        });
+    </script>
+
+</div>

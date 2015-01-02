@@ -1,0 +1,72 @@
+.deckgrid[deckgrid]::before {
+    /* Specifies that the grid should have a maximum of 4 columns. Each column will have the classes 'column' and 'column-1-4' */
+    content: '10 .column.column-1-10';
+    font-size: 0; /* See https://github.com/akoenig/angular-deckgrid/issues/14#issuecomment-35728861 */
+    visibility: hidden;
+}
+
+.deckgrid[deckgrid]::after {
+    /* Specifies that the grid should have a maximum of 4 columns. Each column will have the classes 'column' and 'column-1-4' */
+    // content: '10 .column.column-1-10';
+    font-size: 0; /* See https://github.com/akoenig/angular-deckgrid/issues/14#issuecomment-35728861 */
+    visibility: hidden;
+}
+
+.deckgrid .column {
+    float: left;
+
+    > div {
+        position: relative;
+        height: 100%;
+    }
+}
+
+.deckgrid .column-1-10 {
+    position: relative;
+    width: 10%;
+    height: 10%;
+}
+
+.deckgrid {
+    position: relative;
+    @include square(600px);
+    left: 50%;
+    margin-left: -300px;
+
+    span {
+        display: none;
+    }
+}
+
+.square {
+    position: relative;
+    height: 100%;
+    // font-size: 0;
+    background-color: #F7F7F7;
+    @include box-shadow(inset 0 0 10px #ccc);
+    margin: 1px;
+    overflow: hidden;
+
+    &:hover {
+        cursor: pointer;
+        background: #ccc;
+
+        span {
+            display: block !important;
+            text-align: center;
+            line-height: 58px;
+        }
+    }
+}
+
+.score {
+    text-align: center;
+}
+
+.play {
+    padding-top: 15px;
+    background: -webkit-radial-gradient(#e74c3c, #bf473a);
+    background: -moz-radial-gradient(#e74c3c, #bf473a);
+    background: -o-radial-gradient(#e74c3c, #bf473a);
+    background: radial-gradient(#e74c3c, #bf473a);
+}

@@ -18,7 +18,7 @@ angular
     'ngTouch',
     // 3rd-Party Modules
     'ui.router',
-    'ui.grid'
+    'akoenig.deckgrid'
   ])
   .config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/');
