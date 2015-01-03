@@ -1,16 +1,4 @@
-<div class="play">
-
-    <div deckgrid source="squares" class="deckgrid">
-
-        <div class="square"><span>{{card.sq}}</span></div>
-
-    </div>
-
-    <script type="text/javascript">
-        $(document).ready(function() {
+<div class="play"> <div deckgrid source="squares" class="deckgrid"> <div class="square" ng-click="mother.openModal()"> <span>{{card.sq}}</span> </div> </div> <script type="text/javascript">$(document).ready(function() {
             var $screenHeight = $(window).height();
             $('.play').css('height', $screenHeight);
-        });
-    </script>
-
-</div>
+        });</script> </div>

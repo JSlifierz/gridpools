@@ -18,6 +18,7 @@ angular
     'ngTouch',
     // 3rd-Party Modules
     'ui.router',
+    'ui.bootstrap',
     'akoenig.deckgrid'
   ])
   .config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {

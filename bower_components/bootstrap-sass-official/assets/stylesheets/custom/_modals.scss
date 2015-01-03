@@ -1,0 +1,22 @@
+#selectModal {
+    padding: 20px;
+    text-align: center;
+
+    form {
+        display: inline-flex;
+
+        input {
+            margin: 20px 10px 5px;
+        }
+    }
+}
+
+.yes {
+    color: #4CAF50;
+    border: 2px solid #4CAF50;
+
+    &:hover {
+        background: #4CAF50;
+        color: white !important;
+    }
+}
