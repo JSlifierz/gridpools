@@ -1,0 +1,12 @@
+<div class="modal-content inputCont" id="loginModal">
+
+    <h2>Login to Gridpools</h2>
+
+    <form name="loginForm" class="css-form" ng-submit="login(user)">
+        <input type="email" ng-model="user.email" placeholder="Email" required>
+        <input type="password" ng-model="user.password" placeholder="Password" required>
+        <span style="color:#ffffff;">{{ errorMsg }}</span>
+        <input type="submit" value="Login" class="red">
+    </form>
+
+</div>

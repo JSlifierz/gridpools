@@ -1,3 +1,19 @@
+.yes {
+    color: #4CAF50;
+    border: 2px solid #4CAF50;
+
+    &:hover {
+        background: #4CAF50;
+        color: white !important;
+    }
+}
+
+/////////////////////////////////////////////////
+///
+/// SQUARE MODALS
+///
+/////////////////////////////////////////////////
+
 #selectModal {
     padding: 20px;
     text-align: center;
@@ -11,12 +27,37 @@
     }
 }
 
-.yes {
-    color: #4CAF50;
-    border: 2px solid #4CAF50;
+/////////////////////////////////////////////////
+///
+/// LOGIN MODAL
+///
+/////////////////////////////////////////////////
 
-    &:hover {
-        background: #4CAF50;
-        color: white !important;
+#loginModal.modal-content {
+    margin-top: 100px;
+    text-align: center;
+
+    h2 {
+        color: #fff;
+        font-weight: 300;
+        margin-bottom: 20px;
     }
+
+    input {
+        position: relative;
+        width: 60%;
+        left: 20%;
+    }
+
+    input[type="submit"] {
+        width: 60%;
+        color: #fff;
+        background-color: #F44336;
+
+        &:hover {
+            background: #4CAF50;
+            border: 2px solid #4CAF50;
+        }
+    }
+
 }

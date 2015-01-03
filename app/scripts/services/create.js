@@ -3,7 +3,7 @@
 /**
  * THE CREATE SERVICE
  * ------------------------------------
- * Send's feedback to the Flask API
+ * Creates a new user account and grid
  */
 
 angular
@@ -34,7 +34,6 @@ angular
             },
 
             createGrid: function (creds) {
-                console.log(creds.gridName)
                 ref.set({grid: creds.gridName});
             }
 

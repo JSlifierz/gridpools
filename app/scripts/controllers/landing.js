@@ -8,10 +8,19 @@
  */
 
 angular.module('gridpoolsApp')
-  .controller('LandingController',['$scope', '$state', 'Create', function ($scope, $state, Create) {
+  .controller('LandingController',['$scope', '$state', 'Create', '$modal', function ($scope, $state, Create, $modal) {
 
-    // $scope.windowHeight = $window.innerHeight;
-    // console.log($scope.windowHeight)
+    $scope.openModal = function () {
+
+        var modalInstance = $modal.open({
+            templateUrl: 'views/login.html',
+            controller: 'LoginController'
+        });
+
+        modalInstance.result.then(function (selectedItem) {
+            $scope.selected = selectedItem;
+        });
+    };
 
     $scope.creds = {};
 
