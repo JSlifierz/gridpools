@@ -8,13 +8,20 @@
  */
 
 angular.module('gridpoolsApp')
-  .controller('LandingController',['$scope', '$state', function ($scope, $state) {
+  .controller('LandingController',['$scope', '$state', 'Create', function ($scope, $state, Create) {
 
     // $scope.windowHeight = $window.innerHeight;
     // console.log($scope.windowHeight)
 
-    $scope.play = function () {
-        $state.go('grid');
+    $scope.creds = {};
+
+    $scope.play = function (creds) {
+        Create.createUser(creds).then(function(resolve) {
+            Create.createGrid(creds);
+            $state.go('grid');
+        }, function (reject) {
+            console.log(reject)
+        });
     }
 
   }]);

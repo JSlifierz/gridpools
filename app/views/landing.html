@@ -5,7 +5,7 @@
             <img src="../images/gridpoolsLogo.png" alt="Gridpools Logo">
             <h1>GRIDPOOLS</h1>
             <button id="create" class="yellow">Create</button>
-            <button id="join" class="yellow">Join Grid</button>
+            <button id="join" class="yellow">Login</button>
             <p>Play Superbowl Squares Online!</p>
             <a href="mailto:info@gridpools.com">Contact Us</a>
         </div>
@@ -21,15 +21,13 @@
 
         <h2>Start <span class="bold">a grid</span> for you and your friends</h2>
 
-        <form novalidate ng-submit="play()">
-            <input type="text" placeholder="Full Name" required>
-            <input type="email" placeholder="Email" required>
-            <input type="text" placeholder="Grid Name">
+        <form ng-submit="play(creds)">
+            <input type="email" placeholder="Email" ng-model="creds.email" required>
+            <input type="password" placeholder="Password" ng-model="creds.password" required>
+            <input type="text" placeholder="Grid Name" ng-model="creds.gridName" required>
             <a href="welcome/terms" target="_blank">Terms of Use and Service</a>
             <input type="submit" value="PLAY!" class="red">
         </form>
-
-
 
         <div class="pimg col-lg-6">
             <img src="../images/crown.png" alt="Gridpools Crown">

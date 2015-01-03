@@ -19,7 +19,8 @@ angular
     // 3rd-Party Modules
     'ui.router',
     'ui.bootstrap',
-    'akoenig.deckgrid'
+    'akoenig.deckgrid',
+    'firebase'
   ])
   .config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/');
