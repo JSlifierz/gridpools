@@ -1,12 +1,27 @@
 <div class="modal-content inputCont" id="loginModal">
 
-    <h2>Login to Gridpools</h2>
+    <h2 ng-show="!forgot">Login to Gridpools</h2>
+    <h2 ng-show="forgot">Forgot Password</h2>
 
-    <form name="loginForm" class="css-form" ng-submit="login(user)">
+    <form ng-show="!forgot" class="css-form" ng-submit="login(user)">
         <input type="email" ng-model="user.email" placeholder="Email" required>
         <input type="password" ng-model="user.password" placeholder="Password" required>
-        <span style="color:#ffffff;">{{ errorMsg }}</span>
+        <div class="msg-block" ng-show="errorMsg">
+            <span class="msg-error">{{ errorMsg }}</span>
+        </div>
         <input type="submit" value="Login" class="red">
     </form>
+
+    <form ng-show="forgot" ng-submit="forgotPw(email)">
+        <input type="email" ng-model="email.email" placeholder="Email" ng-hide="success" required>
+        <div class="msg-block changeMsg" ng-show="success || error">
+            <span class="msg-success" ng-hide="!success">{{ success }}</span>
+            <span class="msg-error" ng-hide="!error || success">{{ error }}</span>
+        </div>
+        <input type="submit" value="Submit" class="red" ng-hide="success">
+    </form>
+
+    <p id="pwToggle" ng-click="forgot = !forgot" ng-show="!forgot">Forgot password?</p>
+    <p id="pwToggle" ng-click="forgot = !forgot" ng-hide="success || !forgot">Nevermind, I remember</p>
 
 </div>

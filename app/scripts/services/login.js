@@ -31,6 +31,23 @@ angular
 
                 return deferred.promise;
 
+            },
+
+            forgotPw: function (forgot) {
+
+                var deferred = $q.defer();
+
+                ref.resetPassword({
+                    email : forgot.email
+                }, function(error) {
+                    if (error === null) {
+                        deferred.resolve('Password reset email sent successfully');
+                } else {
+                        deferred.reject("Sorry, we have no account with that email address");
+                    }
+                });
+
+                return deferred.promise;
             }
 
         }

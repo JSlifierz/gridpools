@@ -61,3 +61,25 @@
     }
 
 }
+
+#pwToggle {
+    width: auto;
+
+    &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+    }
+}
+
+.msg-block {
+    padding-bottom: 15px;
+}
+
+.msg-error {
+    color: #ffffff;
+}
+
+.msg-success {
+    font-size: 24px;
+    color: #4CAF50;
+}

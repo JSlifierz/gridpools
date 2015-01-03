@@ -15,11 +15,18 @@ angular.module('gridpoolsApp')
 
     $scope.login = function (user) {
         Login.login(user).then(function(resolve) {
-            console.log(resolve)
             $modalInstance.close();
             $state.go('grid');
         }, function (reject) {
-            console.log(reject)
+            $scope.errorMsg = reject;
+        });
+    }
+
+    $scope.forgotPw = function (forgot) {
+        Login.forgotPw(forgot).then(function(resolve) {
+            $scope.success = resolve;
+        }, function (reject) {
+            $scope.error = reject;
         });
     }
 
