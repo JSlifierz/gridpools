@@ -1,1 +1,30 @@
-<h1>THIS IS THE PROFILE VIEW</h1>
+<div>
+
+    <form>
+        <div class="profileImgCont">
+            <img src="../images/genericprofile.jpg" alt="profilePicture" />
+            <span class="chg-span">Change Profile Picture</span>
+        </div>
+    </form>
+
+    <form>
+        <input type="text" placeholder="Name">
+        <input type="email" placeholder="Email">
+    </form>
+
+    <button>Change Password</button>
+
+    <form name="changePassword" ng-show="password" ng-submit="changePw(pw)">
+        <p id="pwNote">Enter a new password and confirm below</p>
+        <input type="password" placeholder="Password" name="pw.password" ng-model="pw.password" ng-minlength="6" ng-maxlength="20" required>
+        <input type="password" placeholder="Confirm Password" name="confirm" ng-model="pw.confirm" ui-validate=" '$value==pw.password' " ui-validate-watch=" 'pw.password' " required>
+        <div class="msg-block" ng-show="!changePassword.confirm.$error.validator || errorMsg">
+            <span class="msg-error" style="color:#2ECC71;" ng-hide="changePassword.confirm.$error.validator">Your Passwords Match!</span>
+            <span class="msg-error" style="color:#EF4836;" ng-hide="!changePassword.confirm.$error.validator">{{ errorMsg }}</span>
+        </div>
+        <input type="submit" value="Change Password">
+    </form>
+
+</div>
+
+
