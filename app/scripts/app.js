@@ -32,10 +32,22 @@ angular
         controller: 'LandingController',
         module: 'public'
       })
-      .state('grid', {
-        url: '/grid',
+      .state('dashboard', {
+        url: '/dashboard',
+        templateUrl: 'views/dashboard.html',
+        controller: 'DashboardController',
+        module: 'public'
+      })
+      .state('dashboard.grid', {
+        url: '/',
         templateUrl: 'views/grid.html',
         controller: 'GridController',
+        module: 'public'
+      })
+      .state('dashboard.profile', {
+        url: '/',
+        templateUrl: 'views/profile.html',
+        // controller: 'GridController',
         module: 'public'
       })
 

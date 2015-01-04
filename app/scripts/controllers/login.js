@@ -3,9 +3,8 @@
 /*
  * THE LOGIN CONTROLLER
  * ------------------------------------
- * COntrols the modal that is called when
- * a square is clicked. Allows for user to
- * select & own square.
+ * Controls the login and forgot
+ * password form.
  */
 
 angular.module('gridpoolsApp')
@@ -16,7 +15,7 @@ angular.module('gridpoolsApp')
     $scope.login = function (user) {
         Login.login(user).then(function(resolve) {
             $modalInstance.close();
-            $state.go('grid');
+            $state.go('dashboard');
         }, function (reject) {
             $scope.errorMsg = reject;
         });
@@ -29,9 +28,5 @@ angular.module('gridpoolsApp')
             $scope.error = reject;
         });
     }
-
-    // $scope.close = function() {
-    //     $modalInstance.close();
-    // };
 
   }]);

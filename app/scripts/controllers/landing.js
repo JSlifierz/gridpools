@@ -27,7 +27,7 @@ angular.module('gridpoolsApp')
     $scope.play = function (creds) {
         Create.createUser(creds).then(function(resolve) {
             Create.createGrid(creds);
-            $state.go('grid');
+            $state.go('dashboard');
         }, function (reject) {
             console.log(reject)
         });

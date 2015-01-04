@@ -1,0 +1,63 @@
+/////////////////////////////////////////////////
+///
+/// NAVIGATION BAR
+///
+/////////////////////////////////////////////////
+
+.nav {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: $nav-height;
+    background-color: $nav-bg-color;
+    padding: 0 15px;
+
+    h3 {
+        margin: 0;
+        color: $light-primary;
+    }
+}
+
+/////////////////////////////////////////////////
+///
+/// MENU BAR
+///
+/////////////////////////////////////////////////
+
+.menu {
+    position: absolute;
+    left: 0;
+    top: $menu-top;
+    width: $menu-width;
+    height: 100%;
+    border-right: 1px solid $divider;
+    padding-top: 25px;
+}
+
+.menu-item {
+    position: relative;
+    width: 100%;
+    padding: 0 25px;
+    font-family: "Roboto";
+    font-size: 1em;
+    color: $text-primary;
+    line-height: 50px;
+
+    &:hover,
+    &.active {
+        cursor: pointer;
+        background-color: $light-primary;
+    }
+
+    a {
+
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+}

@@ -25,6 +25,29 @@ $brand-info:            #5bc0de !default;
 $brand-warning:         #f0ad4e !default;
 $brand-danger:          #d9534f !default;
 
+//== Material Design Palette
+
+$dark-primary:          #303F9F !default;
+$primary:               #3F51B5 !default;
+$light-primary:         #C5CAE9 !default;
+$text-icons:            #ffffff !default;
+$accent:                #448aFF !default;
+$text-primary:          #212121 !default;
+$text-secondary:        #727272 !default;
+$divider:               #B6B6B6 !default;
+
+$success:               #4CAF50 !default;
+$error:                 #F44336 !default;
+
+//== Navigation
+
+$nav-height:            64px;
+$nav-bg-color:          $primary;
+
+//== Side Menu
+
+$menu-top:              $nav-height;
+$menu-width:            150px;
 
 //== Scaffolding
 //
