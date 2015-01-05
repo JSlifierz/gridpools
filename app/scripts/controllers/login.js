@@ -8,13 +8,14 @@
  */
 
 angular.module('gridpoolsApp')
-  .controller('LoginController',['$scope', '$modalInstance', 'Login', '$state', function ($scope, $modalInstance, Login, $state) {
+  .controller('LoginController',['$scope', '$modalInstance', 'Login', '$state', 'Profile', function ($scope, $modalInstance, Login, $state, Profile) {
 
     $scope.user = {};
 
     $scope.login = function (user) {
         Login.login(user).then(function(resolve) {
             $modalInstance.close();
+            Profile.getData();
             $state.go('dashboard');
         }, function (reject) {
             $scope.errorMsg = reject;

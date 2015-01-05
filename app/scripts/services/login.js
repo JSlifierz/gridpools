@@ -8,7 +8,7 @@
 
 angular
     .module('gridpoolsApp')
-    .factory('Login', ['$firebase', '$q', function ($firebase, $q) {
+    .factory('Login', ['$firebase', '$q', '$cookies', '$state', function ($firebase, $q, $cookies, $state) {
 
         var ref = new Firebase("https://scorching-torch-8007.firebaseio.com/");
 
@@ -25,12 +25,18 @@ angular
                     if (error) {
                         deferred.reject("Login failed!", error);
                     } else {
+                        $cookies.gridpools = 'welcome back';
                         deferred.resolve("Authenticated successfully with payload:");
                     }
                 });
 
                 return deferred.promise;
 
+            },
+
+            logout: function() {
+                delete $cookies['gridpools'];
+                $state.go('home');
             },
 
             forgotPw: function (forgot) {

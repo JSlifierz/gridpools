@@ -7,7 +7,8 @@
  */
 
 angular.module('gridpoolsApp')
-  .controller('DashboardController',['$scope',  function ($scope) {
+  .controller('DashboardController',['$scope', 'Login',  function ($scope, Login) {
 
+    $scope.login = Login;
 
   }]);

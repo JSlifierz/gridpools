@@ -20,7 +20,9 @@ angular
     'ui.router',
     'ui.bootstrap',
     'akoenig.deckgrid',
-    'firebase'
+    'firebase',
+    'angularFileUpload',
+    'base64'
   ])
   .config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/');
@@ -36,19 +38,43 @@ angular
         url: '/dashboard',
         templateUrl: 'views/dashboard.html',
         controller: 'DashboardController',
-        module: 'public'
+        module: 'private'
       })
       .state('dashboard.grid', {
         url: '/',
         templateUrl: 'views/grid.html',
-        controller: 'GridController',
-        module: 'public'
+        controller: 'GridController'
       })
       .state('dashboard.profile', {
         url: '/',
         templateUrl: 'views/profile.html',
-        // controller: 'GridController',
-        module: 'public'
+        controller: 'ProfileController'
       })
+
+  }])
+
+  .run(['Profile', '$rootScope', '$state', '$cookies', function(Profile, $rootScope, $state, $cookies){
+
+    Profile.requestUser().then(function(resolve) {
+        Profile.getData().then(function() {
+            $state.go('dashboard');
+        });
+    }, function(reject) {
+        $state.go('home');
+    });
+
+    $rootScope.$on('$stateChangeStart', function(e, toState, toParams, fromState, fromParams, scope, next, current) {
+
+        if (toState.module === 'private' && !$cookies.gridpools) {
+            // If logged out and transitioning to a logged in page:
+            e.preventDefault();
+            $state.go('home');
+        } else if (toState.module === 'public' && $cookies.gridpools) {
+            // If logged in and transitioning to a logged out page:
+            e.preventDefault();
+            $state.go('dashboard');
+        }
+
+    });
 
   }]);
