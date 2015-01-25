@@ -16,6 +16,7 @@ angular
     'ngResource',
     'ngSanitize',
     'ngTouch',
+    'ngMaterial',
     // 3rd-Party Modules
     'ui.router',
     'ui.bootstrap',
@@ -24,7 +25,7 @@ angular
     'angularFileUpload',
     'base64'
   ])
-  .config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
+  .config(['$stateProvider', '$urlRouterProvider', '$mdThemingProvider', function ($stateProvider, $urlRouterProvider, $mdThemingProvider) {
     $urlRouterProvider.otherwise('/');
 
     $stateProvider
@@ -49,7 +50,11 @@ angular
         url: '/',
         templateUrl: 'views/profile.html',
         controller: 'ProfileController'
-      })
+      });
+
+    $mdThemingProvider.theme('default')
+        .primaryColor('blue')
+        .accentColor('blue-grey');
 
   }])
 

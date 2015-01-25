@@ -68,44 +68,44 @@ a:hover {
   color: white !important;
 }
 
-input {
-    display: block;
-    width: 80%;
-    margin-bottom: 15px;
-    background-color: #f9f9f9;
-    border: none;
-    border-radius: 5px;
-    box-shadow: inset 1px 1px 2px #ccc;
-    color: #666;
-    padding: 10px;
-    font-size: 12px;
-}
+// input {
+//     display: block;
+//     width: 80%;
+//     margin-bottom: 15px;
+//     background-color: #f9f9f9;
+//     border: none;
+//     border-radius: 5px;
+//     box-shadow: inset 1px 1px 2px #ccc;
+//     color: #666;
+//     padding: 10px;
+//     font-size: 12px;
+// }
 
-button, input[type="submit"] {
-  width: 125px;
-  font-family: "Roboto Slab", serif !important;
-  font-size: 1em !important;
-  font-weight: 200 !important;
-  text-transform: uppercase;
-  background-color: rgba(0, 0, 0, 0);
-  padding: 6px 15px;
-  border-radius: 5px;
-  box-shadow: none;
-}
+// button, input[type="submit"] {
+//   // width: 125px;
+//   font-family: "Roboto Slab", serif !important;
+//   font-size: 1em !important;
+//   font-weight: 200 !important;
+//   text-transform: uppercase;
+//   background-color: rgba(0, 0, 0, 0);
+//   padding: 6px 15px;
+//   border-radius: 5px;
+//   box-shadow: none;
+// }
 
-button:hover, input[type="submit"]:hover {
-  cursor: pointer;
-  transition: all 0.3s ease;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-}
+// button:hover, input[type="submit"]:hover {
+//   cursor: pointer;
+//   transition: all 0.3s ease;
+//   -webkit-transition: all 0.3s ease;
+//   -moz-transition: all 0.3s ease;
+//   -o-transition: all 0.3s ease;
+//   -ms-transition: all 0.3s ease;
+// }
 
-form a {
-    display: block;
-    margin-bottom: 15px;
-}
+// form a {
+//     display: block;
+//     margin-bottom: 15px;
+// }
 
 // input[type="checkbox"], input[type="radio"] {
 //   background-color: white;
